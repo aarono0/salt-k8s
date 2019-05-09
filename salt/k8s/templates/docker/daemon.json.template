@@ -1,0 +1,4 @@
+{
+	  "registry-mirrors": ["https://pqbap4ya.mirror.aliyuncs.com"],
+  	  "insecure-registries" : ["http://172.16.101.49", "http://10.170.255.87"]
+}

@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-demo-many-hosts
+  namespace: prom
+  annotations:
+    kuberneters.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/proxy-body-size: 60m
+spec:
+  rules:
+  - host: demo1.jieyue.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: demo1
+          servicePort: 80
+  - host: demo2.jieyue.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: demo2
+          servicePort: 9090
